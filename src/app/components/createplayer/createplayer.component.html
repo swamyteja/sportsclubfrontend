@@ -1,0 +1,63 @@
+<div class="bg-container">
+    <div class="form-container shadow-lg p-4 mb-5 bg-black rounded">
+        <form [formGroup] = "playerForm" (ngSubmit) ="onSubmit()" class="m-3 mt-4">
+            <p  class="crediential-names mt-3">Name</p>
+            <input type="text" placeholder="Enter Name"  formControlName="playerName">
+            <br> 
+            <span style="color: red;" class="warning-msg" *ngIf="f.playerName && f.playerName.invalid && f.playerName.touched">*Required</span>
+            <p class="crediential-names mt-3">Age</p>
+            <input type="text" placeholder="Enter contactNumber" formControlName="playerAge">
+            <br>
+            <span style="color: red;" class="warning-msg" *ngIf="f.playerAge && f.playerAge.invalid && f.playerAge.touched">*Required</span>
+           
+            <p class="crediential-names mt-3">ContactNumber</p>
+            <input type="text" placeholder="Enter contactNumber" formControlName="playerContactNo">
+            <br>
+            <span style="color: red;" class="warning-msg" *ngIf="f.playerContactNo && f.playerContactNo.invalid && f.playerContactNo.touched">*Required</span>
+         
+ 
+            <div class="crediential-names mt-3">
+                <label class="form-title">Gender :</label>
+                <select formControlName="playerGender" class="form-control w-100 p-0">
+                    <option selected value="0">--select Gender--</option>
+                    <option class="option-styles" *ngFor="let gender of Genders">{{gender}}</option>
+                </select>
+            </div>
+
+            <p  class="crediential-names mt-3">ClubName</p>
+            <select  formControlName="clubId" class="form-control w-100 p-0"   (change)="findClub($event)">
+                <option selected  value = 0>------select Club ------</option>
+                <option class="option-styles"   *ngFor="let club of clubList" [value]="club.clubId">{{club.clubName}}</option>
+            </select>
+            <span style="color: red;" class="warning-msg" *ngIf="f.clubId && f.clubId.invalid && f.clubId.touched">*Required</span>
+    
+
+            <p  class="crediential-names mt-3">GameName</p>
+            <select  formControlName="gameId" class="form-control w-100 p-0" (change)="findGame($event)">
+                <option selected  value = 0>------select Game ------</option>
+                <option class="option-styles"   *ngFor="let game of gamesList" [value]="game.gameId" >{{game.gameName}}</option>
+            </select>
+            <span style="color: red;" class="warning-msg" *ngIf="f.gameId && f.gameId.invalid && f.gameId.touched">*Required</span>
+            
+            <p  class="crediential-names mt-3">CoachName</p>
+            <select  formControlName="coachId" class="form-control w-100 p-0">
+                <option selected  value = 0>------select coach ------</option>
+                <option class="option-styles"   *ngFor="let coach of coachList" [value]="coach.coachId" >{{coach.coachName}}</option>
+            </select>
+            <span style="color: red;" class="warning-msg" *ngIf="f.coachId && f.coachId.invalid && f.coachId.touched">*Required</span>
+
+
+          <br>
+            
+             <div class="text-center m-0">
+                <button type="submit" class="btn btn-success m-0 border border-dark" >Create</button>
+             </div>
+             <br>
+
+             <a routerLink="/playerDetails">Show all players</a>
+            
+            <br>
+        </form>
+    </div>
+</div>
+

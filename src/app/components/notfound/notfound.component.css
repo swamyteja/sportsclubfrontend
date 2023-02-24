@@ -1,0 +1,14 @@
+.bg-container{
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.notfound-img{
+    height: 100%;
+    background-size: cover;
+    width:90%;
+    padding:20px;
+}

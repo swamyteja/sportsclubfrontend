@@ -1,0 +1,19 @@
+<div *ngIf="displayHeader" class="nav-component bg-black">
+
+    <div class="container-fluid">
+      
+      <div class="nav-container">
+        <div class="nav-item log-cont">
+           <img routerLink="/homepage" src="https://seeklogo.com/images/L/Leixoes_Sport_Club-logo-BA9E18556E-seeklogo.com.png" class="logo"/>
+           <h1 class="sp-heading">SportsClub</h1>
+        </div>
+
+         <ul class="un-order-list-components"> 
+            <li *ngIf="showLogout" (click) = "onLogOut()" class="comp-tests">Logout</li>
+             <li routerLink="/homepage" class="comp-tests">Home</li>
+         </ul>
+        
+        </div>
+    </div>
+  
+</div>

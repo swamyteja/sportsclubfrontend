@@ -1,0 +1,26 @@
+
+.logo-img{
+  border-radius: 15px;
+}
+.nav-color{
+    color: #568bdb;
+}
+
+.text-color{
+    color: rebeccapurple;
+    font-family: "Roboto";
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.bg-container{
+    background-image:url("https://www.vmcdn.ca/f/files/shared/miscellaneous-stock-images/sports.jpeg;w=1200;h=500;mode=crop");
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    opacity: 0.9;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding:30px;
+}

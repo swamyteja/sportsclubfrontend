@@ -1,0 +1,28 @@
+<div class="bg-container">
+
+    <div class="form-container shadow-lg p-4 mb-5 bg-black rounded">
+        <form [formGroup] = "sportsClub" (ngSubmit) ="onSubmit()" class="m-3 mt-4">
+            <p  class="crediential-names mt-3 mb-0">clubName</p>
+            <input type="text" placeholder="Enter club name" class=" input-el"  formControlName="clubName">
+            <br> 
+            <span style="color: red;" class="warning-msg" *ngIf="clubName && clubName.invalid && clubName.touched">*Required</span>
+            <p class="crediential-names mt-3 mb-0">location</p>
+            <input type="text" placeholder="Enter location " class=" input-el" formControlName="location">
+            <br>
+            <span style="color: red;" class="warning-msg" *ngIf="location && location.invalid && location.touched">*Required</span>
+            
+            <p class="crediential-names mt-3 mb-0">contactNo</p>
+            <input type="text" placeholder="Enter Contact Number"class="   input-el" formControlName="contactNo">
+            <br>
+            <span style="color: red;" class="warning-msg" *ngIf="contactNo && contactNo.invalid && contactNo.touched">*Required</span>
+            
+
+             <div class="text-center m-0">
+                <button type="submit" class="btn btn-success mb-2 mt-2 border border-dark" >Create</button>
+             </div>
+             <br>
+             <a routerLink="/sportsClubDetails">Show all sportsclubs</a>
+        </form>
+    </div>
+
+</div>

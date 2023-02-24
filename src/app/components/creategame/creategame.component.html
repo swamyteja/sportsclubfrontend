@@ -1,0 +1,33 @@
+<div class="bg-container">
+    <div class="form-container shadow-lg p-4 mb-5 bg-black rounded">
+        <form [formGroup] = "gameForm" (ngSubmit) ="onSubmit()" class="m-3 mt-4">
+            <p  class="crediential-names mt-3">Game Name</p>
+            <input type="text" placeholder="Enter Game Name"  formControlName="gameName">
+            <br> 
+            <span style="color: red;" class="warning-msg" *ngIf="f.gameName && f.gameName.invalid && f.gameName.touched">*Required</span>
+            
+           
+            <p class="crediential-names mt-3">Fee</p>
+            <input type="text" placeholder="Enter Fee" formControlName="gameCoachingFee">
+            <br>
+            <span style="color: red;" class="warning-msg" *ngIf="f.gameCoachingFee && f.gameCoachingFee.invalid && f.gameCoachingFee.touched">*Required</span>
+           
+            <p  class="crediential-names mt-3">ClubName</p>
+            <select  formControlName="clubId" class="form-control w-100 p-0">
+                <option selected  value = 0>------select Club ------</option>
+                <option class="option-styles"   *ngFor="let club of clubList" [value]="club.clubId">{{club.clubName}}</option>
+            </select>  
+       
+            <span style="color: red;" class="warning-msg" *ngIf="f.clubId && f.clubId.invalid && f.clubId.touched">*Required</span>
+            <br>
+             <div class="text-center m-0">
+                <button type="submit" class="btn btn-success m-0 border border-dark" >Create</button>
+             </div>
+             <br>
+
+             <a routerLink="/games">Show Games</a>
+            
+            <br>
+        </form>
+    </div>
+</div>

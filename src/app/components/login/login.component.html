@@ -1,0 +1,28 @@
+
+<div class="bg-container">
+    <div class="form-container shadow-lg p-4 mb-5 bg-black rounded">
+        <form [formGroup] = "loginForm" (ngSubmit) ="onSubmit()" class="m-3 mt-4">
+            <p  class="crediential-names mt-3 login-text">Admin Mail</p>
+            <input type="text" placeholder="Enter mail"  formControlName="adminEmail">
+            <br> 
+            <span style="color: red;" class="warning-msg" *ngIf="f.adminEmail && f.adminEmail.invalid && f.adminEmail.touched">*Required</span>
+            <p class="crediential-names mt-3 login-text">Password</p>
+            <input type="password" id="password" placeholder="Enter password" formControlName="password">
+            <br>
+            <span style="color: red;" class="warning-msg" *ngIf="f.password && f.password.invalid && f.password.touched">*Required</span>
+        
+            <div class="mt-1 mb-2 d-flex align-items-center">
+                <input type="checkbox" onchange="document.getElementById('password').type = this.checked ? 'text' : 'password'"> 
+                <label class="form-title" for="password" style="margin-left: 5px; font-size: 12px; color:aliceblue">Show password</label>
+            </div>
+
+             <div class="text-center m-0">
+                <button type="submit" class="btn btn-success m-0 border border-dark" >Login</button>
+             </div>
+             <br>
+            <p style="color: red;"  class="warning-msg1 text-center">Don't have an account? <a routerLink="/signup" class="link-primary">SingUp</a></p>
+            <br>
+        </form>
+    </div>
+</div>
+

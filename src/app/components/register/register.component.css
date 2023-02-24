@@ -1,0 +1,45 @@
+.bg-container{
+    background-image:linear-gradient(rgb(33, 110, 91),rgba(7, 43, 41, 0.651));
+    background-size: 100%;
+    min-height: 100vh;
+    opacity: 0.9;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+.form-title{
+    font-size: 13px;
+    color: #222429;
+    font-weight: 500;
+}
+.bg-card{
+    background-color: black;
+    background-size: 100%;
+    border-radius: 5px;
+    min-height: 55vh;
+    padding:15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.form-field {
+    height: 27px;
+}
+.login-text{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    font-weight: 500;
+    color:aliceblue;
+    margin-bottom: 5px;
+    
+}
+.span-field{
+    color: red; font-size: 10px;
+}
+.form-bg{
+    padding:30px; 
+    background-color: #edeff2;
+    
+}

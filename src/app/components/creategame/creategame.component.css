@@ -1,0 +1,45 @@
+.form-container{
+    background-image: url("https://w0.peakpx.com/wallpaper/493/292/HD-wallpaper-grayishblue-blue-colour-gray-plain-background.jpg");
+    background-size: 100%;
+    border-radius: 10px;
+    min-height: 55vh;
+    padding:15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin:20px;
+    
+}
+.crediential-names{
+    color:rgba(12, 11, 11, 0.959);
+    font-family:"Roboto";
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 0px;
+}
+
+.warning-msg{
+    font-family:"Roboto";
+    font-size: 10px;
+    margin:0px;
+}
+
+.bg-container{
+    background-image:linear-gradient(rgb(33, 110, 91),rgba(7, 43, 41, 0.651));
+    background-size: 100%;
+    min-height: 100vh;
+    opacity: 0.9;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.warning-msg1{
+    font-family:"Roboto";
+    font-size: 12px;
+    margin:0px;
+}
+.option-styles{
+    width:100%;
+}

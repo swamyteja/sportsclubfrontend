@@ -1,0 +1,54 @@
+<div class="bg-container">
+        <div class="form-border ">
+            <form class="shadow-lg bg-card " [formGroup]="adminForm" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <label class="form-title login-text" for="adminName">Name</label>
+                    <br>
+                    
+                    <input type="text" id="adminName" placeholder="Enter Name" class="form-field form-control" formControlName="adminName"/>
+                    <span class="span-field" *ngIf="adminName && adminName.invalid && adminName.touched">*Required</span>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label class="form-title login-text" for="adminEmail">Email</label>
+                    <br>
+                   
+                    <input type="text" id="adminEmail" placeholder="Ex: abc@gmail.com" class="form-field form-control" formControlName="adminEmail" required/>
+                    <span class="span-field" *ngIf="adminEmail && adminEmail.invalid && adminEmail.touched">{{getErrorMessage()}}</span>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label class="form-title login-text" for="adminAge">Age </label>
+                    <br>
+                   
+                    <input type="text" id="adminAge" placeholder="Enter Age" class="form-field form-control" formControlName="adminAge"/>
+                    <span class="span-field" *ngIf="adminAge && adminAge.invalid && adminAge.touched">*Required</span>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label class="form-title login-text" for="password">Password </label>
+                    <br>
+                   
+                    <input type="password" id="password" placeholder="Enter Password" class="form-field form-control" formControlName="password"/>
+                    <span class="span-field" *ngIf="password && password.invalid && password.touched">{{getPasswordError()}}</span>
+                </div>
+                <div class="mt-1 mb-2 d-flex align-items-center">
+                    <input type="checkbox" onchange="document.getElementById('password').type = this.checked ? 'text' : 'password'"> 
+                    <label class="form-title" for="password" style="margin-left: 5px; font-size: 12px; color:aliceblue">Show password</label>
+                </div>
+    
+            
+                <br>
+                
+                <div class="text-center">
+                    <button type="submit" class="btn btn-success m-0 border border-dark">Sign Up</button>
+                </div>
+                
+            
+        </form>
+        </div>
+
+    
+</div>
+
+

@@ -1,0 +1,13 @@
+
+<div mat-dialog-content>
+    <h2>Update Experience</h2>
+    <mat-form-field appearance="fill">
+      <mat-label>Enter experience</mat-label>
+      <input matInput [(ngModel)]="data.playerAge">
+    </mat-form-field>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()" class="btn btn-primary m-2">No Thanks</button>
+    <button mat-button [mat-dialog-close]="data.playerAge" class="btn btn-success" cdkFocusInitial>Ok</button>
+  </div>
+  

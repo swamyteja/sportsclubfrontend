@@ -1,0 +1,60 @@
+<div class="bg-container">
+  <table mat-table [dataSource]="playerList" class="mat-elevation-z8 list-background m-1 shadow-lg p-3 mb-5 bg-white rounded">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  
+    <!-- Position Column -->
+    <ng-container matColumnDef="playerId">
+      <th mat-header-cell *matHeaderCellDef style="font-weight:bold" > PlayerId</th>
+      <td mat-cell *matCellDef="let element"> {{element.playerId}}</td>
+    </ng-container> 
+
+    <ng-container matColumnDef="clubId">
+      <th mat-header-cell *matHeaderCellDef style="font-weight:bold" > ClubName</th>
+      <td mat-cell *matCellDef="let element"> {{element.clubName}}</td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="playerName">
+      <th mat-header-cell *matHeaderCellDef style="font-weight:bold"> PlayerName </th>
+      <td mat-cell *matCellDef="let element"> {{element.playerName}} </td>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="playerAge">
+      <th mat-header-cell *matHeaderCellDef style="font-weight:bold"> PlayerAge </th>
+      <td mat-cell *matCellDef="let element"> {{element.playerAge}} </td>
+    </ng-container>
+  
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="playerContactNo">
+      <th mat-header-cell *matHeaderCellDef style="font-weight:bold"> ContactNo </th>
+      <td mat-cell *matCellDef="let element"> {{element.playerContactNo}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="coachName">
+      <th mat-header-cell *matHeaderCellDef style="font-weight:bold"> Coach Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.coachName}} </td>
+    </ng-container>
+
+  
+
+    <ng-container matColumnDef="delete" >
+      <th mat-header-cell *matHeaderCellDef style="font-weight:bold" > Delete</th>
+      <td mat-cell *matCellDef="let element" >
+         <button class="btn btn-danger" (click) = "onClickDeletePlayer(element.playerId)">delete</button> </td>
+    </ng-container>
+     
+    <ng-container matColumnDef="update" >
+      <th mat-header-cell *matHeaderCellDef style="font-weight:bold"> Update </th>
+      <td mat-cell *matCellDef="let element" >
+         <button class="btn btn-warning" (click) = "onClickUpdatePlayer(element.playerId)">Update</button> </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    
+  </table>
+  <button routerLink="/createPlayer" class="btn btn-primary">Add Player</button>
+</div>

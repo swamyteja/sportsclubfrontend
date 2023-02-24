@@ -1,0 +1,23 @@
+<div class="form-container shadow-lg bg-black rounded">
+      <form [formGroup] = "form" (ngSubmit) ="onSubmit()" class="m-3 mt-4">
+          <p  class="crediential-names mt-3">Game Name</p>
+          <input type="text" placeholder="Enter Game Name" class="input-el" formControlName="gameName">
+          <br> 
+          <span style="color: red;" class="warning-msg" *ngIf="f.gameName && f.gameName.invalid && f.gameName.touched">*Required</span>
+          
+         
+          <p class="crediential-names mt-3">Fee</p>
+          <input type="text" placeholder="Enter Fee" class="input-el" formControlName="gameCoachingFee">
+          <br>
+          <span style="color: red;" class="warning-msg" *ngIf="f.gameCoachingFee && f.gameCoachingFee.invalid && f.gameCoachingFee.touched">*Required</span>
+           <br>
+          
+           <div class="text-center m-0">
+              <button type="submit" class="btn btn-success m-0 border border-dark" >Update</button>
+           </div>
+
+      </form>
+
+      <button (click)="noThanks()" class="btn btn-info">Cancel</button>
+  </div>
+

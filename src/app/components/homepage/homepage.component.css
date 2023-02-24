@@ -1,0 +1,44 @@
+.a{
+    background-color: transparent;
+    margin: 20px;
+    box-shadow:1px 1px 1px 1px;
+    touch-action: pan-y;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+.logo-img{
+    border-radius: 15px;
+  }
+  .nav-color{
+      color: #568bdb;
+  }
+  
+  .text-color{
+      color: rebeccapurple;
+      font-family: "Roboto";
+      font-size: 25px;
+      font-weight: 500;
+  }
+  
+.card-img-top{
+    height:30vh;
+    opacity:0.8;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+  .bg-container{
+      background-image:linear-gradient(rgb(33, 110, 91),rgba(7, 43, 41, 0.651));
+      background-size: 100%;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      padding: 40px;
+  }
+
+.a:hover {
+    transform: scale(1.1);
+    box-shadow: 5px 5px 15px rgba(7, 43, 41, 0.651);
+}

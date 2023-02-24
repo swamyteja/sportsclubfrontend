@@ -1,0 +1,46 @@
+
+<div class="bg-container">
+    <div class="form-container shadow-lg p-4 mb-5 bg-black rounded">
+        <form [formGroup] = "coachForm" (ngSubmit) ="onSubmit()" class="m-3 mt-4">
+            <p  class="crediential-names mt-3">Coach Name</p>
+            <input type="text" placeholder="Enter Name"  formControlName="coachName">
+            <br> 
+            <span style="color: red;" class="warning-msg" *ngIf="f.coachName && f.coachName.invalid && f.coachName.touched">*Required</span>
+            <p class="crediential-names mt-3">Experience</p>
+            <input type="text" placeholder="Enter experience" formControlName="coachExperience">
+            <br>
+            <span style="color: red;" class="warning-msg" *ngIf="f.coachExperience && f.coachExperience.invalid && f.coachExperience.touched">*Required</span>
+
+            <p  class="crediential-names mt-3">ClubName</p>
+            <select  formControlName="clubId" class="form-control w-100 p-0"   (change)="findClub($event)">
+                <option selected  value = 0>------select Club ------</option>
+                <option class="option-styles"   *ngFor="let club of clubList" [value]="club.clubId">{{club.clubName}}</option>
+            </select>
+            <span style="color: red;" class="warning-msg" *ngIf="f.clubId && f.clubId.invalid && f.clubId.touched">*Required</span>
+    
+            <p  class="crediential-names mt-3">GameName</p>
+            <select  formControlName="gameId" class="form-control w-100 p-0">
+                <option selected  value = 0>------select Game ------</option>
+                <option class="option-styles"   *ngFor="let game of gamesList" [value]="game.gameId" >{{game.gameName}}</option>
+            </select>
+            <span style="color: red;" class="warning-msg" *ngIf="f.gameId && f.gameId.invalid && f.gameId.touched">*Required</span>
+            
+
+            <p class="crediential-names mt-3">Specialization</p>
+            <input type="text" placeholder="Enter Specialization" formControlName="coachSpecialization">
+            <br>
+            <span style="color: red;" class="warning-msg" *ngIf="f.coachSpecialization && f.coachSpecialization.invalid && f.coachSpecialization.touched">*Required</span>
+            
+        
+            <br>
+             <div class="text-center m-0">
+                <button type="submit" class="btn btn-success m-0 border border-dark" >Create</button>
+             </div>
+             <br>
+
+             <a routerLink="/coach">Show all coaches</a>
+            
+            <br>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,52 @@
+.form-container{
+    background-color: black;
+    background-size: 100%;
+    border-radius: 10px;
+    height: 55vh;
+    padding:15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    cursor: pointer;
+}
+
+.crediential-names{
+    color:rgba(12, 11, 11, 0.959);
+    font-family:"Roboto";
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 0px;
+}
+
+.warning-msg{
+    font-family:"Roboto";
+    font-size: 10px;
+    margin:0px;
+}
+
+.bg-container{
+    background-image:linear-gradient(rgb(33, 110, 91),rgba(7, 43, 41, 0.651));
+    background-size: 100%;
+    min-height: 100vh;
+    opacity: 0.9;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.warning-msg1{
+    font-family:"Roboto";
+    font-size: 12px;
+    margin:0px;
+}
+
+.login-text{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    font-weight: 500;
+    color:aliceblue;
+    margin-bottom: 5px;
+    
+}
